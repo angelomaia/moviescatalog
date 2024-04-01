@@ -1,0 +1,8 @@
+<h1> Gêneros </h1>
+
+<% @genders.each do |gender|%>
+
+    <%= link_to gender.name, gender_path(gender.id)  %>
+    <br>
+
+<% end%>

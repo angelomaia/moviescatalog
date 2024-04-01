@@ -1,26 +1,5 @@
-<h1> Gêneros </h1>
+<h1> <%= link_to 'Gêneros', genders_path %> </h1>
 
-<% @genders.each do |gender|%>
+<h1> <%= link_to 'Diretores', directors_path %> </h1>
 
-    <%= link_to gender.name, gender_path(gender.id)  %>
-    <br>
-
-<% end%>
-
-<h1> Diretores </h1>
-
-<% @directors.each do |director|%>
-
-    <%= link_to director.name, director_path(director.id)  %>
-    <br>
-
-<% end%>
-
-<h1> Filmes </h1>
-
-<% @movies.each do |movie| %>
-
-  <%= link_to "#{movie.title} (#{movie.year})", movie_path(movie.id) %>
-  <br>
-  
-<% end %>
+<h1> <%= link_to 'Filmes', movies_path %> </h1>
