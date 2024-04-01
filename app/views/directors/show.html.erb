@@ -1,0 +1,21 @@
+<%= link_to 'Editar diretor', edit_director_path %>
+
+<h1> <%= @director.name%> </h1>
+<dl>    
+    <dd>
+        <strong>País de origem:</strong> <%= @director.country%>
+    </dd>
+    <dd>
+        <strong>Data de nascimento:</strong> <%= @director.birth%>
+    </dd>
+    <dd>
+        <strong>Gênero favorito:</strong> <%= @director.fav_gender%>
+    </dd>
+</dl>
+
+<h2> Filmes dirigidos por <%= @director.name%> </h2>
+<ul>
+<% @movies.each do |movie| %>
+    <li><%= link_to movie.title, movie_path(movie) %></li>
+<% end %>
+</ul>

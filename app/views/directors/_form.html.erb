@@ -1,0 +1,21 @@
+<%= form_with model: @director do |f| %>
+<div>
+    <%= f.label :name, 'Nome:' %>
+    <%= f.text_field :name %>
+</div>
+<div>
+    <%= f.label :country, 'País de origem:' %>
+    <%= f.text_field :country %>
+</div>
+<div>
+    <%= f.label :birth, 'Data de nascimento:' %>
+    <%= f.date_field :birth %>
+</div>
+<div>
+    <%= f.label :fav_gender, 'Gênero favorito:' %>
+    <%= f.text_field :fav_gender %>
+</div>
+<div>
+    <%= f.submit 'Salvar' %>
+</div>
+<% end %>

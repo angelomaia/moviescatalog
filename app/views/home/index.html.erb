@@ -1,0 +1,26 @@
+<h1> Gêneros </h1>
+
+<% @genders.each do |gender|%>
+
+    <%= link_to gender.name, gender_path(gender.id)  %>
+    <br>
+
+<% end%>
+
+<h1> Diretores </h1>
+
+<% @directors.each do |director|%>
+
+    <%= link_to director.name, director_path(director.id)  %>
+    <br>
+
+<% end%>
+
+<h1> Filmes </h1>
+
+<% @movies.each do |movie| %>
+
+  <%= link_to "#{movie.title} (#{movie.year})", movie_path(movie.id) %>
+  <br>
+  
+<% end %>

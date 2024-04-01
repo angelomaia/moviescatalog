@@ -1,0 +1,28 @@
+<%= link_to 'Editar filme', edit_movie_path %>
+
+<h1> <%= @movie.title%> </h1>
+<dl>    
+    <dd>
+        <strong>Ano:</strong> <%= @movie.year%>
+    </dd>
+    
+    <dd>
+        <strong>Sinopse:</strong> <%= @movie.synopsis%>
+    </dd>
+    
+    <dd>
+        <strong>País de origem:</strong> <%= @movie.country%>
+    </dd>
+
+    <dd>
+        <strong>Duração:</strong> <%= @movie.length%>
+    </dd>
+
+    <dd>
+        <strong>Diretor:</strong> <%= @movie.director.name %>
+    </dd>
+
+    <dd>
+        <strong>Gênero:</strong> <%= @movie.gender.name %>
+    </dd>
+</dl>
