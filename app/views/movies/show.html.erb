@@ -25,4 +25,7 @@
     <dd>
         <strong>Gênero:</strong> <%= @movie.gender.name %>
     </dd>
+    <dd>
+        <strong>Status:</strong> <%= @movie.launched? ? 'Lançado' : 'Não lançado' %>
+    </dd>
 </dl>

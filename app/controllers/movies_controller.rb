@@ -14,7 +14,8 @@ class MoviesController < ApplicationController
                             country: params[:movie][:country],
                             length: params[:movie][:length],
                             gender_id: params[:movie][:gender_id],
-                            director_id: params[:movie][:director_id])
+                            director_id: params[:movie][:director_id],
+                            status: params[:movie][:status].to_i)
         if @movie.save
             return redirect_to movie_path(@movie.id)
         end
@@ -34,16 +35,11 @@ class MoviesController < ApplicationController
             country: params[:movie][:country],
             length: params[:movie][:length],
             gender_id: params[:movie][:gender_id],
-            director_id: params[:movie][:director_id])
+            director_id: params[:movie][:director_id],
+            status: params[:movie][:status].to_i)
             return redirect_to movie_path(@movie.id)
         end
 
         render :edit
     end
-
-    # def publish
-    #     recipe = Recipe.find(params[:id])
-    #     recipe.published!
-    #     redirect_to recipe_path(recipe.id)
-    # end
 end

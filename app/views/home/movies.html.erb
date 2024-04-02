@@ -3,6 +3,11 @@
 <% @movies.each do |movie| %>
 
   <%= link_to "#{movie.title} (#{movie.year})", movie_path(movie.id) %>
+  <% if movie.unlaunched? %>
+    <span style="color: red;">(Não lançado)</span>
+  <% else %>
+    <span style="color: green;">(Lançado)</span>
+  <% end %>
   <br>
   
 <% end %>
