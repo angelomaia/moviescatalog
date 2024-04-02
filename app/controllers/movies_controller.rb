@@ -15,6 +15,7 @@ class MoviesController < ApplicationController
                             length: params[:movie][:length],
                             gender_id: params[:movie][:gender_id],
                             director_id: params[:movie][:director_id],
+                            poster: params[:movie][:poster],
                             status: params[:movie][:status].to_i)
         if @movie.save
             return redirect_to movie_path(@movie.id)
@@ -36,6 +37,7 @@ class MoviesController < ApplicationController
             length: params[:movie][:length],
             gender_id: params[:movie][:gender_id],
             director_id: params[:movie][:director_id],
+            poster: params[:movie][:poster],
             status: params[:movie][:status].to_i)
             return redirect_to movie_path(@movie.id)
         end

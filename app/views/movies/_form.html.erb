@@ -27,9 +27,13 @@
     <%= f.label :gender, 'Gênero:' %>
     <%= f.collection_select :gender_id, Gender.all, :id, :name %>
 </div>
+<div>
+    <%= f.label :poster, 'Poster:' %>
+    <%= f.file_field :poster %>
+</div>
 <div class="field">
-<%= f.label :status, 'Status:' %>
-<%= f.check_box :status, { checked: @movie.launched? } %> Lançado
+    <%= f.label :status, 'Status:' %>
+    <%= f.check_box :status, { checked: @movie.launched? } %> Lançado
 </div>
 <div>
     <%= f.submit 'Salvar' %>

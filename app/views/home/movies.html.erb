@@ -1,7 +1,9 @@
 <h1> Filmes </h1>
 
 <% @movies.each do |movie| %>
-
+  <% if movie.poster.attached? %>
+      <%= image_tag url_for(movie.poster), style: "width: 50px; height: auto;" %>
+  <% end %>
   <%= link_to "#{movie.title} (#{movie.year})", movie_path(movie.id) %>
   <% if movie.unlaunched? %>
     <span style="color: red;">(Não lançado)</span>

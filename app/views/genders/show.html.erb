@@ -6,7 +6,12 @@
 <% if @movies.any? %>
   <ul>
     <% @movies.each do |movie| %>
-      <li><%= link_to movie.title, movie_path(movie) %></li>
+      <li>
+        <% if movie.poster.attached? %>
+        <%= image_tag url_for(movie.poster), style: "width: 50px; height: auto;" %>
+      <% end %>
+      <%= link_to movie.title, movie_path(movie) %>
+      </li>
     <% end %>
   </ul>
 <% else %>
